@@ -24,5 +24,9 @@ void print_array(const int *array, size_t size);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
+void swap(int *a, int *b);
+void quick_sort(int *array, size_t size);
+void sort_arr(int *array, unsigned int low, unsigned int high, size_t size);
+unsigned int part(int *array, unsigned int low, unsigned int high, size_t size);
 
 #endif /* _SORT_H */
