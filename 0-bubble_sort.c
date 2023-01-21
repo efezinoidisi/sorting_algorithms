@@ -13,7 +13,7 @@
 
 void bubble_sort(int *array, size_t size)
 {
-	unsigned int i, j, swap;
+	unsigned int i, j, swap, sorted = 0;
 	int temp;
 
 	/*check that array is not empty and it contains more than 2 elements*/
@@ -33,11 +33,17 @@ void bubble_sort(int *array, size_t size)
 				array[j] = array[j + 1];
 				array[j + 1] = temp;
 				swap = 1;
+				sorted = 1;
 			}
 
 			/* print array if a swap happens */
 			if (swap)
 				print_array(array, size);
+
 		}
+
+		if (!sorted)
+			return;
+
 	}
 }
