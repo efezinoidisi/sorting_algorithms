@@ -6,15 +6,13 @@
  * @b: second integer
  * Return: nothing
  */
-void swap(size_t a, size_t b)
+void swap(int *a, int *b)
 {
-	size_t tmp;
+	int tmp;
 
-	tmp = a;
-	a = b;
-	b = tmp;
-
-	return;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 /**
@@ -28,19 +26,18 @@ void selection_sort(int *array, size_t size)
 {
 	size_t i, min, j;
 
-	for (i=0; i < size - 1; i++)
+	for (i = 0; i < size - 1; i++)
 	{
 		min = i;
-		for (j = i+1; j < size; j++)
+		for (j = i + 1; j < size; j++)
 		{
 			if (array[j] < array[min])
 				min = j;
 		}
 		if (min != i)
 		{
-			swap(array[i], array[min]);
+			swap(&array[i], &array[min]);
 			print_array(array, size);
 		}
 	}
-	return;
 }
