@@ -17,7 +17,7 @@ void bubble_sort(int *array, size_t size)
 	int temp;
 
 	/*check that array is not empty and it contains more than 2 elements*/
-	if (!array || size <= 2)
+	if (!array || size < 2)
 		return;
 
 	for (i = 0; i < size - 1; i++)
