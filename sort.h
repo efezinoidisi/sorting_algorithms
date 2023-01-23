@@ -28,5 +28,7 @@ void swap(int *a, int *b);
 void quick_sort(int *array, size_t size);
 void sort_arr(int *array, unsigned int low, unsigned int high, size_t size);
 unsigned int part(int *array, unsigned int low, unsigned int high, size_t size);
+void shell_sort(int *array, size_t size);
+
 
 #endif /* _SORT_H */
