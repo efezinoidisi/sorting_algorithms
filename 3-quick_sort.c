@@ -35,6 +35,9 @@ void sort_arr(int *array, unsigned int low, unsigned int high, size_t size)
 {
 	unsigned int pivot_index;
 
+	if (size < 2)
+		return;
+
 	if (low < high)
 	{
 		pivot_index = part(array, low, high, size);
