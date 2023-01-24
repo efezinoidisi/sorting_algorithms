@@ -1,5 +1,11 @@
 #include "sort.h"
-                                               
+
+/**
+ * counting_sort - Sort out array with counting sort
+ * @array: input array, contains integers
+ * @size: Size of array
+ * Return: nothing
+ */
 void counting_sort(int *array, size_t size)
 {    
         size_t i, k, m, n;
