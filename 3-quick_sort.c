@@ -35,9 +35,6 @@ void sort_arr(int *array, unsigned int low, unsigned int high, size_t size)
 {
 	unsigned int pivot_index;
 
-	if (size < 2)
-		return;
-
 	if (low < high)
 	{
 		pivot_index = part(array, low, high, size);
@@ -58,7 +55,7 @@ void sort_arr(int *array, unsigned int low, unsigned int high, size_t size)
  * Return: index of pivot
  */
 
-unsigned int part(int *array, unsigned int low, unsigned int high, size_t size)
+unsigned int part(int *array, size_t low, size_t high, size_t size)
 {
 	int i, j, pivot;
 
